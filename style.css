@@ -28,11 +28,7 @@ h2{
         display: flex;
         flex-direction: column;
     }
-        .news .main-news header{ 
-            height: 57px;
-        }
         .news .main-news .header-news{
-            height:  311px;
             display: flex;
         }
             .news .main-news .header-news .content{
@@ -90,6 +86,7 @@ h2{
                 }              
             .news .main-news .header-news img{
                 width: 460px;
+                margin: 0 auto;
             }
         .news .main-news .other-news{
             height: 542px;
@@ -112,6 +109,7 @@ h2{
                 ;
         }
             .news .main-news .other-news .item img{
+                width: 100%;
                 grid-area: i;
             }
             .news .main-news .other-news .item main{
@@ -161,98 +159,96 @@ h2{
         width: 416px;
         grid-template-columns: 1fr;
     }
-    .news-list header{
-        grid-area: h;
-        height: 57px;
-    }
-    .news-list .list{
-        grid-area: l;
-        padding: 20px 38px;
-        background: rgba(48, 63, 134, 0.2);
-        display: flex;
-        flex-direction: column;
-    }
-        .news-list .list .item{
-            margin-bottom: 10px;   
+        .news-list header{
+            grid-area: h;
         }
-            .news-list .list .item h5{
-                margin: 0;
-                font-weight: normal;
-                font-size: 16px;
+        .news-list .list{
+            grid-area: l;
+            padding: 20px 38px;
+            background: rgba(48, 63, 134, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+            .news-list .list .item{
+                margin-bottom: 10px;   
             }
-            .news-list .list .item footer{
-                justify-content: space-between;
-                display: flex;
-                align-items: center;
-                margin-top: 5px;
+                .news-list .list .item h5{
+                    margin: 0;
+                    font-weight: normal;
+                    font-size: 16px;
+                }
+                .news-list .list .item footer{
+                    justify-content: space-between;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 5px;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: rgba(0, 0, 0, 0.5)
+                }                
+                .news-list .list .item footer .button{
+                    background: rgba(243, 243, 243, 0.5);
+                    width: 124px;
+                    height: 29px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    user-select: none;
+                    transition: .2s;
+                    cursor: pointer;
+                }
+                .news-list .list .item footer .button:hover{
+                    background: rgb(243, 243, 243);
+                    color: rgb(0, 0, 0 );
+                }
+        .news-list .all-news-button{
+            margin-left: -5px;
+            margin-top: 35px;
+            display:flex;
+            padding: 5px;
+            align-items: center;
+            justify-content:start;
+            color: rgba(0, 0, 0, 0.5);
+            transition: 1s;
+            cursor: pointer;
+            user-select: none;
+        }
+        .news-list .all-news-button:hover{
+            background: white;
+            color: black;
+        }  
+            .news-list .all-news-button img{
+                transition: 1s;
+                margin-left: 10px;
+                width: 30px;
+                height: 10px;
+            }
+            .news-list .all-news-button:hover img{
+                margin-left: 100px;
+            }
+        .news-list .tags-list{
+            grid-area: t;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 420px;
+        }
+        .news-list .tags-list ul {
+            list-style: none;
+        }
+            .news-list .tags-list ul li{
+                width: 200px;
+                margin-bottom: 4px;
                 font-weight: 300;
                 font-size: 14px;
-                line-height: 16px;
-                color: rgba(0, 0, 0, 0.5)
-            }
-            
-            .news-list .list .item footer .button{
-                background: rgba(243, 243, 243, 0.5);
-                width: 124px;
-                height: 29px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                user-select: none;
-                transition: .2s;
                 cursor: pointer;
+                padding: 5px;
+                transition: .2s;
             }
-            .news-list .list .item footer .button:hover{
-                background: rgb(243, 243, 243);
-                color: rgb(0, 0, 0 );
+            .news-list .tags-list ul li:hover{
+                background: rgba(48, 63, 134, 0.2);
             }
-    .news-list .all-news-button{
-        margin-left: -5px;
-        margin-top: 35px;
-        display:flex;
-        padding: 5px;
-        align-items: center;
-        justify-content:start;
-        color: rgba(0, 0, 0, 0.5);
-        transition: 1s;
-        cursor: pointer;
-        user-select: none;
-    }
-    .news-list .all-news-button:hover{
-        background: white;
-        color: black;
-    }  
-        .news-list .all-news-button img{
-            transition: 1s;
-            margin-left: 10px;
-            width: 30px;
-            height: 10px;
-        }
-        .news-list .all-news-button:hover img{
-            margin-left: 100px;
-        }
-    .news-list .tags-list{
-        grid-area: t;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 420px;
-    }
-    .news-list .tags-list ul {
-        list-style: none;
-    }
-        .news-list .tags-list ul li{
-            width: 200px;
-            margin-bottom: 4px;
-            font-weight: 300;
-            font-size: 14px;
-            cursor: pointer;
-            padding: 5px;
-            transition: .2s;
-        }
-        .news-list .tags-list ul li:hover{
-            background: rgba(48, 63, 134, 0.2);
-        }
 @media (max-width: 1500px){
     .news{
         width: 1000px;        
@@ -266,5 +262,46 @@ h2{
             'h .'
             'l t'
         ;
+    }
+}
+@media (max-width: 1000px){
+    .news{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+    .news .main-news{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .news .main-news .header-news{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .news .main-news .header-news img{
+        width: 100%;
+    }
+    .news .main-news .header-news .content{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 10px;
+    }
+    .news .main-news .other-news{
+        height: fit-content;
+        display: flex;
+        flex-direction: column; 
+    }
+    .news .main-news .other-news .item{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .news-list{
+        display: flex;
+        flex-direction: column;
     }
 }
