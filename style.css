@@ -13,19 +13,16 @@ h2{
     letter-spacing: 0.1px;
 }
 .news-background{
-    height: 1096px;
     background-color: #fff;
-    padding-top:75px ;
+    padding:75px 0;
 }   
 .news{
     margin:0 auto;
     width: 1450px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 996px 416px;
+    grid-gap: 38px;
 }
-.news>div + div{
-    margin-left: 38px;
-}
-
     .news .main-news{
         width: 996px;
         display: flex;
@@ -160,20 +157,23 @@ h2{
                     color: #fff;
                 }
     .news-list{
+        margin: 0 auto;
         width: 416px;
+        grid-template-columns: 1fr;
     }
     .news-list header{
+        grid-area: h;
         height: 57px;
     }
     .news-list .list{
+        grid-area: l;
         padding: 20px 38px;
-        max-height: 450px;
         background: rgba(48, 63, 134, 0.2);
         display: flex;
         flex-direction: column;
     }
         .news-list .list .item{
-            margin-bottom: 5px;   
+            margin-bottom: 10px;   
         }
             .news-list .list .item h5{
                 margin: 0;
@@ -181,6 +181,7 @@ h2{
                 font-size: 16px;
             }
             .news-list .list .item footer{
+                justify-content: space-between;
                 display: flex;
                 align-items: center;
                 margin-top: 5px;
@@ -189,9 +190,7 @@ h2{
                 line-height: 16px;
                 color: rgba(0, 0, 0, 0.5)
             }
-            .news-list .list .item footer time{
-                width: 160px;
-            }
+            
             .news-list .list .item footer .button{
                 background: rgba(243, 243, 243, 0.5);
                 width: 124px;
@@ -208,19 +207,20 @@ h2{
                 color: rgb(0, 0, 0 );
             }
     .news-list .all-news-button{
+        margin-left: -5px;
+        margin-top: 35px;
         display:flex;
+        padding: 5px;
         align-items: center;
         justify-content:start;
-        background: rgba(48, 63, 134, 0.2);
         color: rgba(0, 0, 0, 0.5);
-        padding: 18px 38px;
         transition: 1s;
         cursor: pointer;
         user-select: none;
     }
     .news-list .all-news-button:hover{
-        background: rgba(48, 63, 134 );
-        color: white;
+        background: white;
+        color: black;
     }  
         .news-list .all-news-button img{
             transition: 1s;
@@ -232,6 +232,7 @@ h2{
             margin-left: 100px;
         }
     .news-list .tags-list{
+        grid-area: t;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -252,3 +253,18 @@ h2{
         .news-list .tags-list ul li:hover{
             background: rgba(48, 63, 134, 0.2);
         }
+@media (max-width: 1500px){
+    .news{
+        width: 1000px;        
+        grid-template-columns: 1fr;
+    }
+    .news-list{
+        width: unset;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'h .'
+            'l t'
+        ;
+    }
+}
